@@ -307,8 +307,8 @@ def foo():
     for item in range(bar):
         if item:
             return 'fizz'
-    else:
-        return False
+
+	return False
 ```
 
 Should be a returned for "str or bool" because the for-loop is closed
