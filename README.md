@@ -118,14 +118,12 @@ Where `auto_docstring_foo` is the name of variable to set.
 
 ### Behavior Config Settings
 
-+------------------------------+--------------------------------+------------------------------+--------------------------------------------------+
 | Vim Variable                 | Environment Variable           | Default                      | Description                                      |
 |------------------------------|--------------------------------|------------------------------|--------------------------------------------------|
 | g:auto_docstring_style       | AUTO_DOCSTRING_STYLE           | "google"                     | Options: ("google", "sphinx", "numpy", "epydoc") |
 | g:auto_docstring_type_follow | AUTO_DOCSTRING_TYPE_FOLLOW     | "1"                          |                                                  |
 | g:auto_docstring_raw_prefix  | AUTO_DOCSTRING_AUTO_RAW_PREFIX | "1"                          |                                                  |
 | g:auto_docstring_block_order | AUTO_DOCSTRING_BLOCK_ORDER     | "args,raises,returns,yields" |                                                  |
-+------------------------------+--------------------------------+------------------------------+--------------------------------------------------+
 
 
 `AUTO_DOCSTRING_STYLE`
@@ -161,14 +159,12 @@ a function for that.
 
 ### Style Config Settings
 
-+---------------------------------------------+-------------------------------------------+--------------+------------------------------------------------------+
 | Vim Variable                                | Environment Variable                      | Default      | Description                                          |
 |---------------------------------------------|-------------------------------------------|--------------|------------------------------------------------------|
 | g:auto_docstring_delimiter                  | AUTO_DOCSTRING_DELIMITER                  | '"""'        |                                                      |
 | g:auto_docstring_include_raise_message      | AUTO_DOCSTRING_INCLUDE_RAISE_MESSAGE      | "1"          |                                                      |
 | g:auto_docstring_remove_trailing_characters | AUTO_DOCSTRING_REMOVE_TRAILING_CHARACTERS | "."          |                                                      |
 | g:auto_docsting_type_order                  | AUTO_DOCSTING_TYPE_ORDER                  | "descending" | Options: ("ascending", "descending", "alphabetical") |
-+---------------------------------------------+-------------------------------------------+--------------+------------------------------------------------------+
 
 `AUTO_DOCSTRING_DELIMITER`
 
@@ -195,7 +191,6 @@ If "alphabetical" then line number is ignored and it is sorted by-name.
 
 ### Syntax Config Settings
 
-+----------------------------------------+--------------------------------------+---------+
 | Vim Variable                           | Environment Variable                 | Default |
 |----------------------------------------|--------------------------------------|---------|
 | g:auto_docstring_third_pary_prefix     | AUTO_DOCSTRING_THIRD_PARY_PREFIX     | "<"     |
@@ -204,7 +199,6 @@ If "alphabetical" then line number is ignored and it is sorted by-name.
 | g:auto_docstring_container_suffix      | AUTO_DOCSTRING_CONTAINER_SUFFIX      | "]"     |
 | g:auto_docstring_option_separator      | AUTO_DOCSTRING_OPTION_SEPARATOR      | " or "  |
 | g:auto_docstring_description_separator | AUTO_DOCSTRING_DESCRIPTION_SEPARATOR | " "     |
-+----------------------------------------+--------------------------------------+---------+
 
 `AUTO_DOCSTRING_THIRD_PARY_PREFIX`
 
