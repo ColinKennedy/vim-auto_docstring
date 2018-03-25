@@ -253,7 +253,7 @@ To see the most recently implemented features, see the CHANGELOG
 
 ```python
 def foo():
-	return 8
+    return 8
 set((foo() for _ in range(10)))
 ```
 should return a type of "set[int]"
@@ -291,9 +291,9 @@ i.e.
 
 ```python
 def foo():
-	for item in range(bar):
-		if item:
-			return 'fizz'
+    for item in range(bar):
+        if item:
+            return 'fizz'
 ```
 
 Should be a return type of "str or NoneType" because there is a chance that the
@@ -304,11 +304,11 @@ Whereas
 
 ```python
 def foo():
-	for item in range(bar):
-		if item:
-			return 'fizz'
-	else:
-		return False
+    for item in range(bar):
+        if item:
+            return 'fizz'
+    else:
+        return False
 ```
 
 Should be a returned for "str or bool" because the for-loop is closed
@@ -319,7 +319,7 @@ Should be a returned for "str or bool" because the for-loop is closed
 Example:
 ```python
 def foo(item):
-	return item
+    return item
 ```
 
 Should allow the user to replace "item" and have it update in both the "Args"
