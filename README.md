@@ -257,7 +257,6 @@ should return a type of "set[int]"
 
 - Follow modules recursively to get the types of objects
 - Add support for local Python imports
-- Allow class docstrings (like an attributes block / args block)
 - Add type-inference for classmethods and instancemethods
 - Allow docstrings with default args to include its default-arg as part of
   the docstring
@@ -272,6 +271,7 @@ should return a type of "set[int]"
 - Support later versions of Python (3.X)
 - R&D Type-hinting, for Python 3 (possibly add it as a goal for 0.4)
 - Support generator syntax with cast types. For example
+- Allow class docstrings (like an attributes block / args block)
 
 
 ### 1.1
