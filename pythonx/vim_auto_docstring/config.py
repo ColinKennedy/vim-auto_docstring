@@ -42,6 +42,10 @@ def allow_type_follow():
     return vim.eval('g:auto_docstring_type_follow')
 
 
+def get_description_separator():
+    return vim.eval('g:auto_docstring_description_separator')
+
+
 def setup():
     auto_docstring.register_config_entry('container_prefix', predicate=get_container_prefix)
     auto_docstring.register_config_entry('container_suffix', predicate=get_container_suffix)
@@ -51,3 +55,4 @@ def setup():
     auto_docstring.register_config_entry('raw_prefix', predicate=get_raw_prefix)
     auto_docstring.register_config_entry('style', predicate=get_style)
     auto_docstring.register_config_entry('type_follow', predicate=allow_type_follow)
+    auto_docstring.register_config_entry('description_separator', predicate=get_description_separator)

@@ -246,7 +246,6 @@ To see the most recently implemented features, see the CHANGELOG
 ### 0.1
 
 - Add dict-comprehension syntax support
-- Allow the user to start docstrings on the next line + indentation, not the current line
 
 
 ### 0.2
