@@ -232,7 +232,10 @@ TODO description
 The text that gets placed between an argument + its type and the tabstop that
 is used for its message.
 
+Note: This option only works for "google" style.
+
 AUTHOR-NOTE: Show what this looks like
+TODO: Do it
 
 
 ## Roadmap
