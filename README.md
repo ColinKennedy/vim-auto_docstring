@@ -246,11 +246,6 @@ Each version has a set number of features to implement.
 To see the most recently implemented features, see the CHANGELOG
 
 
-### 0.1
-
-- Add dict-comprehension syntax support
-
-
 ### 0.2
 
 ```python
