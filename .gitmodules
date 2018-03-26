@@ -1,0 +1,3 @@
+[submodule "auto_docstring"]
+	path = pythonx/vim_auto_docstring/auto_docstring
+	url = https://github.com/ColinKennedy/auto_docstring.git
