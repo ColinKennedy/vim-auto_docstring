@@ -1,6 +1,9 @@
 TODO Make a table of contents for the docs
 Make the first demo asciinema into a GIF
 
+- Make config-related functions cache their results, instead of constantly
+  re-evaluating them
+
 Welcome to vim-auto_docstring, and interactive Python-docstring auto-generator.
 
 The tool supports sphinx-style docstrings as well as Google, numpy, and epydoc
@@ -256,6 +259,7 @@ set((foo() for _ in range(10)))
 should return a type of "set[int]"
 
 - Follow modules recursively to get the types of objects
+ - Make sure that subpackage imports work like `from package import subpackage`
 - Add support for local Python imports
 - Add type-inference for classmethods and instancemethods
 - Allow docstrings with default args to include its default-arg as part of
@@ -305,7 +309,7 @@ def foo():
         if item:
             return 'fizz'
 
-return False
+    return False
 ```
 
 Should be a returned for "str or bool" because the for-loop is closed
