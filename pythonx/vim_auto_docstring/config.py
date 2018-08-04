@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 # IMPORT THIRD-PARY LIBRARIES
-import auto_docstring
 import vim
+
+# IMPORT LOCAL LIBRARIES
+from .auto_docstring.config import environment
 
 
 def get_vim_style():
@@ -47,12 +49,12 @@ def get_description_separator():
 
 
 def setup():
-    auto_docstring.register_config_entry('container_prefix', predicate=get_container_prefix)
-    auto_docstring.register_config_entry('container_suffix', predicate=get_container_suffix)
-    auto_docstring.register_config_entry('delimiter', predicate=get_delimiter)
-    auto_docstring.register_config_entry('indent', predicate=get_indent)
-    auto_docstring.register_config_entry('option_separator', predicate=get_option_separator)
-    auto_docstring.register_config_entry('raw_prefix', predicate=get_raw_prefix)
-    auto_docstring.register_config_entry('style', predicate=get_style)
-    auto_docstring.register_config_entry('type_follow', predicate=allow_type_follow)
-    auto_docstring.register_config_entry('description_separator', predicate=get_description_separator)
+    environment.register_config_entry('container_prefix', predicate=get_container_prefix)
+    environment.register_config_entry('container_suffix', predicate=get_container_suffix)
+    environment.register_config_entry('delimiter', predicate=get_delimiter)
+    environment.register_config_entry('indent', predicate=get_indent)
+    environment.register_config_entry('option_separator', predicate=get_option_separator)
+    environment.register_config_entry('raw_prefix', predicate=get_raw_prefix)
+    environment.register_config_entry('style', predicate=get_style)
+    environment.register_config_entry('type_follow', predicate=allow_type_follow)
+    environment.register_config_entry('description_separator', predicate=get_description_separator)
