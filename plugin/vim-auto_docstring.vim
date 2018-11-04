@@ -1,4 +1,4 @@
-if !has('python')
+if !has('pythonx')
     echoerr "vim-vim_auto_docstring requires Python. Cannot continue loading this plugin"
     finish
 endif
@@ -7,7 +7,7 @@ if get(g:, 'vim_auto_docstring_loaded', '0') == '1'
     finish
 endif
 
-python << EOF
+pythonx << EOF
 from vim_auto_docstring.auto_docstring.styles import epydoc
 from vim_auto_docstring.auto_docstring.styles import google
 from vim_auto_docstring.auto_docstring.styles import numpy
