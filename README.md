@@ -43,40 +43,9 @@ Plug 'ColinKennedy/vim-auto_docstring'
 Plugin 'ColinKennedy/vim-auto_docstring'
 ```
 
-
-Finally, because auto_docstring is a regular UltiSnips snippet, we need to add
-the snippet to UltiSnips's list of Python snippets.
-
-Open a Python file, any is fine, and then run `:UltiSnipsEdit` to open your
-python.snippets file. Add this snippet defintion into it
-
-TODO Make sure these snippets work + installation instructions
-
-```vim
-global !p
-from auto_docstring import docstring_builder
-
-
-def get_auto_docstring():
-    '''Generate a docstring at the current row, in a Vim buffer.'''
-    # return ''
-    (row, _) = vim.current.window.cursor
-    row -= 1
-    code = '\n'.join(list(vim.current.buffer))
-    docstring = docstring_builder.create_ultisnips_docstring(
-        code, row=row, style='')
-    return "'''" + docstring + "'''"
-endglobal
-
-
-post_jump "snip.expand_anon(get_auto_docstring())"
-snippet ad "Create an automatic docstring, in Python"
-endsnippet
-
-```
-
-And that's it, you should be able to get started immediately.
-Of course, you can rename "snippet ad" to be whatever you'd like.
+And that's it, you should be able to get started immediately. Just position
+your cursor where you want to generate a docstring, type "ad" and [Tab] and
+UltiSnips will automatically create the docstring for you.
 
 
 # Features

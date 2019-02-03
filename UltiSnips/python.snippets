@@ -1,0 +1,30 @@
+global !p
+from vim_auto_docstring.auto_docstring.config import environment
+from vim_auto_docstring.auto_docstring.styles import epydoc
+from vim_auto_docstring.auto_docstring.styles import google
+from vim_auto_docstring.auto_docstring.styles import sphinx
+from vim_auto_docstring.auto_docstring.styles import numpy
+import vim_auto_docstring
+
+
+environment.register_code_style(epydoc.EpydocStyle.name, epydoc.EpydocStyle)
+environment.register_code_style(google.GoogleStyle.name, google.GoogleStyle)
+environment.register_code_style(numpy.NumpyStyle.name, numpy.NumpyStyle)
+environment.register_code_style(sphinx.SphinxStyle.name, sphinx.SphinxStyle)
+
+
+def get_auto_docstring():
+    '''Generate a docstring at the current row, in a Vim buffer.'''
+    # return ''
+    (row, _) = vim.current.window.cursor
+    row -= 1
+    code = '\n'.join(list(vim.current.buffer))
+    docstring = vim_auto_docstring.create_ultisnips_docstring(
+        code, row=row, style='')
+    return "'''" + docstring + "'''"
+endglobal
+
+
+post_jump "snip.expand_anon(get_auto_docstring())"
+snippet ad "Create an automatic docstring, in Python"
+endsnippet
